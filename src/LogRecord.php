@@ -2,16 +2,11 @@
 
 namespace Alfan06\LaravelCustomLogging;
 
-class LogRecord extends \Monolog\LogRecord
+class LogRecord extends \Monolog\LogRecordAdd commentMore actions
 {
     public function toArray(): array
     {
         $array = parent::toArray();
-
-        // Remove datetime
-        unset($array['datetime']);
-
-        // Add origin
         return array_merge(['origin' => 'app.' . config('custom-logging.container_role')], $array);
     }
 }
