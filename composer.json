@@ -1,0 +1,19 @@
+{
+  "name": "alfan06/laravel-custom-logging",
+  "description": "Custom logging for AWS cloudwatch containers",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Alfan06\\LaravelCustomLogging\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Alfan06\\LaravelCustomLogging\\CustomLoggingServiceProvider"
+      ]
+    }
+  },
+  "require": {}
+}
